@@ -1,0 +1,24 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#book-form {
+  border: orangered solid 2px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 300px;
+  margin: auto;
+}
+
+#book-form input {
+  height: 35px;
+}
+
+#book-form button {
+  width: 50%;
+  margin: 20px auto;
+}
+
