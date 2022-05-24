@@ -2,8 +2,10 @@ class Book {
   constructor(title, author) {
     this.title = title;
     this.author = author;
+    // this.id = createNewId();
   }
 }
+
 
 const list = document.querySelector('#list');
 
