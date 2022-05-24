@@ -6,7 +6,6 @@ class Book {
   }
 }
 
-
 const list = document.querySelector('#list');
 
 class UI {
@@ -33,7 +32,6 @@ class UI {
 }
 
 class Store {
-  //method gets the books from local storage
   static getBooks() {
     let books = [];
     if (localStorage.getItem('books') === null) {
@@ -44,30 +42,25 @@ class Store {
     return books;
   }
 
-  //method adds the book
   static addBook(book) {
     const books = Store.getBooks();
     books.push(book);
     localStorage.setItem('books', JSON.stringify(books));
   }
 
-  //method Remove the Bood
   static removeBook(ID) {
     const books = Store.getBooks();
     books.forEach((book, index) => {
-      console.log(ID);
-      if (book.id == ID) {
+      if (book.id === Number(ID)) {
         books.splice(index, 1);
       }
     });
     localStorage.setItem('books', JSON.stringify(books));
   }
 
-  //method generated ID
-  static generateId(){
+  static generateId() {
     return Math.floor(Math.random() * 100000000);
   }
-
 }
 
 document.querySelector('#book-form').addEventListener('submit', (e) => {
@@ -86,7 +79,6 @@ document.querySelector('#list').addEventListener('click', (e) => {
   Store.removeBook(ID);
 });
 
-// init app
 function init() {
   list.innerHTML = '';
   Store.getBooks().forEach((book) => UI.getAllBooks(book));
