@@ -1,29 +1,20 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Wayhome Minimalistic Concert
+# Awesome-Books
 
-In this project, I built a concert web page. It is based on the original design idea by Cindy Shin in Behance.
-
+In this project, I build a basic website that allows users to add/remove books from a list. The functionality was done using JS.
 
 ## Built With
 
 - Major languages: HTML, CSS, JS. 
 - Technologies used: Visual Studio Code, Git/GitHub
 
-## Live Demo (if available)
-
-[Live Demo Link](https://livedemo.com)
-
-
 ## Getting Started
-
-For opening the online version of this project, go to: https://giuseppetg.github.io/Giuseppe-Concert-Webpage/
 
 To run this project locally on your computer clone using "git clone" command with this repo url.
 Open the file in your code editor. 
 Run the project in you browser. 
 Thanks for watching.
-
 
 ## Authors
 
@@ -33,6 +24,9 @@ Thanks for watching.
 - Twitter: [@giusetomasini](https://twitter.com/giusetomasini)
 - LinkedIn: [Giuseppe Tomasini](https://www.linkedin.com/in/giuseppe-tomasini-67ba101a8/)
 
+👤 **Ogiogio Victor**
+
+- GitHub: [@ogiogiovictor](https://github.com/ogiogiovictor)
 
 ## 🤝 Contributing
 
@@ -46,8 +40,6 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Inspiration: original design idea by Cindy Shin in Behance.
-- Creative Commons
 
 ## 📝 License
 
