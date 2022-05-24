@@ -1,10 +1,11 @@
 class Book {
-  constructor(title, author) {
+  constructor(title, author, id) {
     this.title = title;
     this.author = author;
-    // this.id = createNewId();
+    this.id = id;
   }
 }
+
 
 const list = document.querySelector('#list');
 
@@ -14,7 +15,7 @@ class UI {
     items.innerHTML = `
     <td>${book.title}</td>
     <td>${book.author}</td>
-    <td><button class="remove-btn">&#10005;</button></td> 
+    <td><button data-id="${book.id}" class="remove-btn">Remove</button></td> 
     `;
 
     list.appendChild(items);
@@ -32,6 +33,7 @@ class UI {
 }
 
 class Store {
+  //method gets the books from local storage
   static getBooks() {
     let books = [];
     if (localStorage.getItem('books') === null) {
@@ -42,21 +44,30 @@ class Store {
     return books;
   }
 
+  //method adds the book
   static addBook(book) {
     const books = Store.getBooks();
     books.push(book);
     localStorage.setItem('books', JSON.stringify(books));
   }
 
-  static removeBook(title) {
+  //method Remove the Bood
+  static removeBook(ID) {
     const books = Store.getBooks();
     books.forEach((book, index) => {
-      if (book.title === title) {
+      console.log(ID);
+      if (book.id == ID) {
         books.splice(index, 1);
       }
     });
     localStorage.setItem('books', JSON.stringify(books));
   }
+
+  //method generated ID
+  static generateId(){
+    return Math.floor(Math.random() * 100000000);
+  }
+
 }
 
 document.querySelector('#book-form').addEventListener('submit', (e) => {
@@ -64,15 +75,15 @@ document.querySelector('#book-form').addEventListener('submit', (e) => {
 
   const title = document.querySelector('#title').value;
   const author = document.querySelector('#author').value;
-  const book = new Book(title, author);
+  const book = new Book(title, author, Store.generateId());
   Store.addBook(book);
   UI.displayBooks(book);
 });
 
 document.querySelector('#list').addEventListener('click', (e) => {
   UI.deleteBook(e.target);
-  const text = e.target.parentElement.previousElementSibling.previousElementSibling;
-  Store.removeBook(text.textContent);
+  const ID = e.target.getAttribute('data-id');
+  Store.removeBook(ID);
 });
 
 // init app
