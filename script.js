@@ -1,8 +1,8 @@
 class Book {
-  constructor(title, author) {
+  constructor(title, author, id) {
     this.title = title;
     this.author = author;
-    // this.id = createNewId();
+     this.id = id;
   }
 }
 
@@ -33,6 +33,7 @@ class UI {
 }
 
 class Store {
+  //method gets the book from local storage
   static getBooks() {
     let books = [];
     if (localStorage.getItem('books') === null) {
@@ -43,12 +44,14 @@ class Store {
     return books;
   }
 
+  //method adds the book
   static addBook(book) {
     const books = Store.getBooks();
     books.push(book);
     localStorage.setItem('books', JSON.stringify(books));
   }
 
+  //method Remove the Bood
   static removeBook(title) {
     const books = Store.getBooks();
     books.forEach((book, index) => {
@@ -58,6 +61,12 @@ class Store {
     });
     localStorage.setItem('books', JSON.stringify(books));
   }
+
+  //method generated ID
+  static generateId(){
+    return Math.floor(Math.random() * 100000000);
+  }
+
 }
 
 document.querySelector('#book-form').addEventListener('submit', (e) => {
@@ -65,7 +74,7 @@ document.querySelector('#book-form').addEventListener('submit', (e) => {
 
   const title = document.querySelector('#title').value;
   const author = document.querySelector('#author').value;
-  const book = new Book(title, author);
+  const book = new Book(title, author, Store.generateId());
   Store.addBook(book);
   UI.displayBooks(book);
 });

@@ -24,9 +24,11 @@ Thanks for watching.
 - Twitter: [@giusetomasini](https://twitter.com/giusetomasini)
 - LinkedIn: [Giuseppe Tomasini](https://www.linkedin.com/in/giuseppe-tomasini-67ba101a8/)
 
+
 👤 **Ogiogio Victor**
 
-- GitHub: [@ogiogiovictor](https://github.com/ogiogiovictor)
+- GitHub: [ogiogiovictor](https://github.com/ogiogiovictor) 
+- LinkedIn: [Ogiogio Victor](https://www.linkedin.com/in/ogiogio-victor-a096a0181/)
 
 ## 🤝 Contributing
 
