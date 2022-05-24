@@ -6,7 +6,6 @@ class Book {
   }
 }
 
-
 const list = document.querySelector('#list');
 
 class UI {
@@ -15,7 +14,7 @@ class UI {
     items.innerHTML = `
     <td>${book.title}</td>
     <td>${book.author}</td>
-    <td><button class="remove-btn">Remove</button></td> 
+    <td><button class="remove-btn">&#10005;</button></td> 
     `;
 
     list.appendChild(items);
