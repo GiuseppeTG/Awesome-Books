@@ -130,21 +130,22 @@ header {
   padding: 5px;
 }
 
-#contact {
+#contact-section {
   min-width: 300px;
   max-width: 60%;
   margin: auto;
   font-size: 16px;
   line-height: 1.5;
+  padding: 0 10px;
 }
 
-#contact ul {
+#contact-section ul {
   margin-top: 15px;
   margin-bottom: 15px;
 }
 
 footer {
-  position: fixed;
+  position: absolute;
   bottom: 0;
   width: 100%;
   padding: 35px;
@@ -155,6 +156,10 @@ footer {
 #form-section,
 #contact-section {
   display:none
+}
+
+#contact-section p{
+  margin-bottom: 15px;
 }
 
 section {
