@@ -4,16 +4,79 @@
   box-sizing: border-box;
 }
 
+body {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 14px;
+}
+
+h1 {
+  width: fit-content;
+  margin: 75px auto 30px auto;
+}
+
+h2 {
+  width: fit-content;
+  margin: 30px auto 30px auto;
+}
+
+#books-table {
+  border-collapse: collapse;
+  margin: 30px auto;
+  min-width: 300px;
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+#books-table thead tr {
+  background-color: aquamarine;
+  text-align: left;
+  font-weight: bold;
+}
+
+#books-table th,
+#books-table td {
+  padding: 12px 15px;
+}
+
+#books-table tbody tr {
+  border-bottom: rgb(184, 184, 184) solid 1px;
+}
+
+#books-table tbody tr:nth-of-type(even) {
+  background-color: bisque;
+}
+
+#books-table tbody tr:last-of-type {
+  border-bottom: aquamarine solid 2px;
+}
+
+.line-separator {
+  display: block;
+  width: 10%;
+  min-width: 200px;
+  height: 1px;
+  margin: 5px auto;
+  background-color: rgba(196, 113, 113, 0.857);
+}
+
 #book-form {
+  border-radius: 5px;
   display: flex;
   flex-direction: column;
   gap: 10px;
   width: 300px;
   margin: auto;
+  padding: 20px;
+  background-color: aquamarine;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 }
 
 #book-form input {
   height: 35px;
+  border: none;
+  border-radius: 3px;
+  padding: 5px 8px;
 }
 
 #book-form button {
@@ -21,7 +84,18 @@
   margin: 20px auto;
 }
 
-#list {
-  width: 100%;
-  height: auto;
+.remove-btn {
+  padding: 5px;
+  background-color: rgb(255, 78, 78);
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+#sumbit-btn {
+  border: rgb(0, 0, 0) solid 1px;
+  border-radius: 5px;
+  background-color: transparent;
+  color: black;
+  padding: 5px;
 }
