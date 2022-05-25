@@ -71,6 +71,10 @@ document.querySelector('#book-form').addEventListener('submit', (e) => {
   const book = new Book(title, author, Store.generateId());
   Store.addBook(book);
   UI.displayBooks(book);
+
+  document.querySelector('#book-list-section').classList.add('active');
+  document.querySelector('#form-section').classList.remove('active');
+  document.querySelector('#contact-section').classList.remove('active');
 });
 
 document.querySelector('#list').addEventListener('click', (e) => {
@@ -84,3 +88,29 @@ function init() {
   Store.getBooks().forEach((book) => UI.getAllBooks(book));
 }
 init();
+
+
+//-----Navbar functionality-----//
+
+const aBookList = document.querySelector('#a-book-list');
+const aAddBook = document.querySelector('#a-add-book');
+const aContact = document.querySelector('#a-contact');
+
+aBookList.addEventListener('click', (e) => {
+  document.querySelector('#book-list-section').classList.add('active');
+  document.querySelector('#form-section').classList.remove('active');
+  document.querySelector('#contact-section').classList.remove('active');
+})
+aAddBook.addEventListener('click', (e) => {
+  document.querySelector('#book-list-section').classList.remove('active');
+  document.querySelector('#form-section').classList.add('active');
+  document.querySelector('#contact-section').classList.remove('active');
+})
+aContact.addEventListener('click', (e) => {
+  document.querySelector('#book-list-section').classList.remove('active');
+  document.querySelector('#form-section').classList.remove('active');
+  document.querySelector('#contact-section').classList.add('active');
+})
+
+
+console.log(document.querySelector('#form-section'));

@@ -10,32 +10,80 @@
 </head>
 <body>
 
-  <h1>All awesome books</h1>
-
-  <table id="books-table">
-    <thead>
-      <tr>
-        <th>Title</th>
-        <th>Author</th>
-        <th>Action</th>
-      </tr>
-    </thead>
-    <tbody id="list">
+  <header>
     
-    </tbody>
-  </table>
+    <nav class="navbar">
 
-  <span class="line-separator"></span>
+      <img src="images/noun-book-1069597.png" alt="Logo">
 
-  <h2>Add a new book</h2>
+      <ul class="nav-menu">
+        <li class="nav-item">
+          <a href="#" class="nav-link" id="a-book-list">Book List</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link" id="a-add-book">Add Book</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link" id="a-contact">Contact</a>
+        </li> 
+      </ul>
 
-    <form id="book-form">
-      <input type="text" placeholder="Title" id="title" name="title" required>
-      <input type="text" placeholder="Author" id="author" name="author" required>
-      <button type="submit" value="Add Book" id="sumbit-btn">Add</button>
-    </form>
+    </nav>
+  </header>
 
+  <main>
 
+    <section id="book-list-section">
+      <h1>All awesome books</h1>
+
+      <table id="books-table">
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="list">
+        
+        </tbody>
+      </table>
+    </section>
+    
+
+    <section class="active" id="form-section">
+      <h2>Add a new book</h2>
+
+      <form id="book-form">
+        <input type="text" placeholder="Title" id="title" name="title" required>
+        <input type="text" placeholder="Author" id="author" name="author" required>
+        <button type="submit" value="Add Book" id="sumbit-btn">Add</button>
+      </form>
+    </section>
+
+      <section id="contact-section">
+        <h2>Contact information</h2>
+        <p>Do you have any questions or you just want to say "Hello"?<br>You can reach out to us!</p>
+        <ul>
+          <li>
+            Our email: giusetomasini@gmail.com
+          </li>
+          <li>
+            our phone number: +573183302651
+          </li>
+          <li>
+            Our adrress: Champ de Mars, 5 Av. Anatole France, 75007 Paris, France
+          </li>
+        </ul>
+      </section>
+  </main>
+    
+
+    <footer>
+      <p>
+        Copiright: Giuseppe Tomasini and Ogiogio Victor
+      </p>
+    </footer>
     
   
   
