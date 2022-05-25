@@ -15,7 +15,8 @@ main {
   margin-top: 120px;
 }
 
-h1, h2 {
+h1,
+h2 {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-size: 30px;
   width: fit-content;
@@ -40,7 +41,7 @@ header {
 }
 
 .navbar img {
-  width:75px
+  width: 75px;
 }
 
 .navbar ul {
@@ -53,6 +54,7 @@ header {
   color: rgb(36, 36, 125);
   text-decoration: none;
 }
+
 .navbar a:hover {
   text-decoration: underline;
 }
@@ -155,19 +157,20 @@ footer {
 #book-list-section,
 #form-section,
 #contact-section {
-  display:none
+  display: none;
 }
 
-#contact-section p{
+#contact-section p {
   margin-bottom: 15px;
 }
 
 section {
   width: fit-content;
   margin: auto;
+  height: 650px;
+  overflow-y: auto;
 }
 
 section.active {
   display: block !important;
 }
-

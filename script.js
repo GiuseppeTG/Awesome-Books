@@ -89,28 +89,24 @@ function init() {
 }
 init();
 
-
-//-----Navbar functionality-----//
+// -----Navbar functionality-----//
 
 const aBookList = document.querySelector('#a-book-list');
 const aAddBook = document.querySelector('#a-add-book');
 const aContact = document.querySelector('#a-contact');
 
-aBookList.addEventListener('click', (e) => {
+aBookList.addEventListener('click', () => {
   document.querySelector('#book-list-section').classList.add('active');
   document.querySelector('#form-section').classList.remove('active');
   document.querySelector('#contact-section').classList.remove('active');
-})
-aAddBook.addEventListener('click', (e) => {
+});
+aAddBook.addEventListener('click', () => {
   document.querySelector('#book-list-section').classList.remove('active');
   document.querySelector('#form-section').classList.add('active');
   document.querySelector('#contact-section').classList.remove('active');
-})
-aContact.addEventListener('click', (e) => {
+});
+aContact.addEventListener('click', () => {
   document.querySelector('#book-list-section').classList.remove('active');
   document.querySelector('#form-section').classList.remove('active');
   document.querySelector('#contact-section').classList.add('active');
-})
-
-
-console.log(document.querySelector('#form-section'));
+});
