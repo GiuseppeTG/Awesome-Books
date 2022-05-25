@@ -13,8 +13,8 @@
   "rules": {
     "no-shadow": "off",
     "no-param-reassign": "off",
-    "max-classes-per-file": ["error", 4],
     "eol-last": "off",
+    "max-classes-per-file": ["error", 4],
     "import/extensions": [ 1, {
       "js": "always", "json": "always"
     }]
