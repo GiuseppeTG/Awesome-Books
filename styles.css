@@ -9,20 +9,61 @@ body {
   font-size: 14px;
 }
 
-h1 {
-  width: fit-content;
-  margin: 75px auto 30px auto;
+main {
+  display: flex;
+  align-items: center;
+  margin-top: 120px;
 }
 
+h1,
 h2 {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 30px;
   width: fit-content;
   margin: 30px auto 30px auto;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.navbar {
+  width: 100%;
+  background-color: aquamarine;
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.navbar img {
+  width: 75px;
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+.navbar a {
+  color: rgb(36, 36, 125);
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
 }
 
 #books-table {
   border-collapse: collapse;
   margin: 30px auto;
   min-width: 300px;
+  max-width: 50%;
   border-radius: 5px 5px 0 0;
   overflow: hidden;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
@@ -49,15 +90,6 @@ h2 {
 
 #books-table tbody tr:last-of-type {
   border-bottom: aquamarine solid 2px;
-}
-
-.line-separator {
-  display: block;
-  width: 10%;
-  min-width: 200px;
-  height: 1px;
-  margin: 5px auto;
-  background-color: rgba(196, 113, 113, 0.857);
 }
 
 #book-form {
@@ -98,4 +130,47 @@ h2 {
   background-color: transparent;
   color: black;
   padding: 5px;
+}
+
+#contact-section {
+  min-width: 300px;
+  max-width: 60%;
+  margin: auto;
+  font-size: 16px;
+  line-height: 1.5;
+  padding: 0 10px;
+}
+
+#contact-section ul {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 35px;
+  background-color: bisque;
+}
+
+#book-list-section,
+#form-section,
+#contact-section {
+  display: none;
+}
+
+#contact-section p {
+  margin-bottom: 15px;
+}
+
+section {
+  width: fit-content;
+  margin: auto;
+  height: 650px;
+  overflow-y: auto;
+}
+
+section.active {
+  display: block !important;
 }
