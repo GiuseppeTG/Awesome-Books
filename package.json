@@ -28,5 +28,11 @@
     "stylelint-config-standard": "^21.0.0",
     "stylelint-csstree-validator": "^1.9.0",
     "stylelint-scss": "^3.21.0"
+  },
+  "dependencies": {
+    "full-icu": "^1.4.0",
+    "install": "^0.13.0",
+    "luxon": "^2.4.0",
+    "npm": "^8.11.0"
   }
 }
