@@ -1,5 +1,5 @@
 export default class Store {
-  static getBooks() {
+  static getBooks = () => {
     let books = [];
     if (localStorage.getItem('books') === null) {
       return books;
@@ -9,13 +9,13 @@ export default class Store {
     return books;
   }
 
-  static addBook(book) {
+  static addBook = (book) => {
     const books = Store.getBooks();
     books.push(book);
     localStorage.setItem('books', JSON.stringify(books));
   }
 
-  static removeBook(ID) {
+  static removeBook = (ID) => {
     const books = Store.getBooks();
     books.forEach((book, index) => {
       if (book.id === Number(ID)) {
@@ -25,7 +25,5 @@ export default class Store {
     localStorage.setItem('books', JSON.stringify(books));
   }
 
-  static generateId() {
-    return Math.floor(Math.random() * 100000000);
-  }
+  static generateId = () => Math.floor(Math.random() * 100000000);
 }

@@ -45,8 +45,9 @@ aContact.addEventListener('click', () => {
   document.querySelector('#contact-section').classList.add('active');
 });
 
-function init() {
+const init = () => {
   getTime();
   Store.getBooks().forEach((book) => UI.getAllBooks(book));
-}
+};
+
 init();
