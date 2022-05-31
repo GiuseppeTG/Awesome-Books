@@ -11,6 +11,8 @@ In this project, I build a basic website that allows users to add/remove books f
 
 ## Getting Started
 
+Live demo: https://giuseppetg.github.io/Book-App/
+
 To run this project locally on your computer clone using "git clone" command with this repo url.
 Open the file in your code editor. 
 Run the project in you browser. 

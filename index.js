@@ -1,67 +1,7 @@
-class Book {
-  constructor(title, author, id) {
-    this.title = title;
-    this.author = author;
-    this.id = id;
-  }
-}
-
-const list = document.querySelector('#list');
-
-class UI {
-  static getAllBooks(book) {
-    const items = document.createElement('tr');
-    items.innerHTML = `
-    <td>${book.title}</td>
-    <td>${book.author}</td>
-    <td><button data-id="${book.id}" class="remove-btn">Remove</button></td> 
-    `;
-
-    list.appendChild(items);
-  }
-
-  static displayBooks(book) {
-    return this.getAllBooks(book);
-  }
-
-  static deleteBook(element) {
-    if (element.classList.contains('remove-btn')) {
-      element.parentElement.parentElement.remove();
-    }
-  }
-}
-
-class Store {
-  static getBooks() {
-    let books = [];
-    if (localStorage.getItem('books') === null) {
-      return books;
-    }
-    books = JSON.parse(localStorage.getItem('books'));
-
-    return books;
-  }
-
-  static addBook(book) {
-    const books = Store.getBooks();
-    books.push(book);
-    localStorage.setItem('books', JSON.stringify(books));
-  }
-
-  static removeBook(ID) {
-    const books = Store.getBooks();
-    books.forEach((book, index) => {
-      if (book.id === Number(ID)) {
-        books.splice(index, 1);
-      }
-    });
-    localStorage.setItem('books', JSON.stringify(books));
-  }
-
-  static generateId() {
-    return Math.floor(Math.random() * 100000000);
-  }
-}
+import Book from './modules/book.js';
+import UI from './modules/user-interface.js';
+import Store from './modules/storage.js';
+import getTime from './modules/day-time.js';
 
 document.querySelector('#book-form').addEventListener('submit', (e) => {
   e.preventDefault();
@@ -82,12 +22,6 @@ document.querySelector('#list').addEventListener('click', (e) => {
   const ID = e.target.getAttribute('data-id');
   Store.removeBook(ID);
 });
-
-function init() {
-  list.innerHTML = '';
-  Store.getBooks().forEach((book) => UI.getAllBooks(book));
-}
-init();
 
 // -----Navbar functionality-----//
 
@@ -110,3 +44,10 @@ aContact.addEventListener('click', () => {
   document.querySelector('#form-section').classList.remove('active');
   document.querySelector('#contact-section').classList.add('active');
 });
+
+const init = () => {
+  getTime();
+  Store.getBooks().forEach((book) => UI.getAllBooks(book));
+};
+
+init();

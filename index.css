@@ -59,6 +59,12 @@ header {
   text-decoration: underline;
 }
 
+.day-time {
+  margin: auto;
+  margin-top: 80px;
+  width: fit-content;
+}
+
 #books-table {
   border-collapse: collapse;
   margin: 30px auto;
