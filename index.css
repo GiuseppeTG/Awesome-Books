@@ -10,9 +10,8 @@ body {
 }
 
 main {
-  display: flex;
-  align-items: center;
-  margin-top: 120px;
+  min-height: 80vh;
+  padding-top: 25px;
 }
 
 h1,
@@ -153,8 +152,7 @@ header {
 }
 
 footer {
-  position: absolute;
-  bottom: 0;
+  display: block;
   width: 100%;
   padding: 35px;
   background-color: bisque;
@@ -173,7 +171,7 @@ footer {
 section {
   width: fit-content;
   margin: auto;
-  height: 650px;
+  height: fit-content;
   overflow-y: auto;
 }
 

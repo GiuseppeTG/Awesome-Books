@@ -5,7 +5,6 @@ export default class Store {
       return books;
     }
     books = JSON.parse(localStorage.getItem('books'));
-
     return books;
   }
 
