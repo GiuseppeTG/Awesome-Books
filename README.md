@@ -4,6 +4,8 @@
 
 In this project, I build a basic website that allows users to add/remove books from a list. The functionality was done using JS.
 
+![Awesome Books app](images/Awesome-Books-List.png)
+
 ## Built With
 
 - Major languages: HTML, CSS, JS. 
